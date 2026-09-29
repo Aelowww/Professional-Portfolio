@@ -9,14 +9,14 @@ const portfolioProjects = projects
       ? `Not deployed publicly yet (${project.status})`
       : project.link.startsWith("http")
         ? project.link
-        : `https://carldev.vercel.app${project.link}`;
+        : `https://carltaberna.vercel.app${project.link}`;
     return [
       `- ${project.title} (${project.category}): ${project.summary}`,
       `  My role: ${project.role}`,
       `  Built with: ${project.techStack.map((technology) => technology.name).join(", ")}`,
       `  Key challenge I solved: ${project.caseStudy.challenges[0]?.title ?? "n/a"}. ${project.caseStudy.challenges[0]?.solution ?? ""}`,
       `  Live link: ${link}`,
-      `  Case study: https://carldev.vercel.app/projects/${project.slug}`,
+      `  Case study: https://carltaberna.vercel.app/projects/${project.slug}`,
       `  Source code: ${project.repo}`
     ].join("\n");
   })

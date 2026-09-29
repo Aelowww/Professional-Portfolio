@@ -10,8 +10,8 @@ const personStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  url: "https://carldev.vercel.app",
-  image: `https://carldev.vercel.app${profile.photo}`,
+  url: "https://carltaberna.vercel.app",
+  image: `https://carltaberna.vercel.app${profile.photo}`,
   jobTitle: "Aspiring Full-Stack Developer",
   description:
     "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring full-stack developer based in Iloilo City, Philippines.",

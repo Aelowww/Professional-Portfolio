@@ -32,7 +32,7 @@ function ExpandIcon() {
 // Internal links ("/") are this site; projects without a live link show no address.
 function displayHost(link) {
   if (!link) return null;
-  if (!/^https?:\/\//.test(link)) return "carldev.vercel.app";
+  if (!/^https?:\/\//.test(link)) return "carltaberna.vercel.app";
   return new URL(link).host;
 }
 

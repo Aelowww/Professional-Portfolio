@@ -1,6 +1,6 @@
 import { projects } from "./data/projects";
 
-const baseUrl = "https://carldev.vercel.app";
+const baseUrl = "https://carltaberna.vercel.app";
 
 export default function sitemap() {
   const caseStudies = projects.map((project) => ({

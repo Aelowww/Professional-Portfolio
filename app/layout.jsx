@@ -25,14 +25,14 @@ const themeInitScript = `
 `;
 
 export const metadata = {
-  metadataBase: new URL("https://carldev.vercel.app"),
+  metadataBase: new URL("https://carltaberna.vercel.app"),
   title: {
     default: "Carl Gemuel Taberna",
     template: "%s | Carl Gemuel Taberna"
   },
   description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring full-stack developer based in Iloilo City, Philippines.",
   applicationName: "Carl Gemuel Taberna",
-  authors: [{ name: "Carl Gemuel Taberna", url: "https://carldev.vercel.app" }],
+  authors: [{ name: "Carl Gemuel Taberna", url: "https://carltaberna.vercel.app" }],
   creator: "Carl Gemuel Taberna",
   publisher: "Carl Gemuel Taberna",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata = {
   openGraph: {
     title: "Carl Gemuel Taberna",
     description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring full-stack developer based in Iloilo City, Philippines.",
-    url: "https://carldev.vercel.app",
+    url: "https://carltaberna.vercel.app",
     siteName: "Carl Gemuel Taberna",
     locale: "en_PH",
     type: "website"
