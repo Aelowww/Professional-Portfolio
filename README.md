@@ -22,7 +22,7 @@ This project is the professional version of my developer portfolio. It uses a mi
 
 - Profile header with quick stats and internship status
 - Bento cards for About, Experience, Tech Stack, Projects, Certificates, and Social Links
-- Experience timeline with roles and dates
+- Separate experience and education timelines
 - Tech stack with official brand logos
 - Project case studies with desktop/mobile previews and a screenshot viewer
 - Certificate pages and resume view
@@ -42,7 +42,7 @@ Open `http://localhost:3000`.
 ## Project Structure
 
 - `app/page.jsx` contains the main landing page content
-- `app/data/profile.js` holds personal details, the experience timeline, certificates, and social links
+- `app/data/profile.js` holds personal details, experience, education, certificates, and social links
 - `app/data/projects.js` holds every project and its case study (add a project here and its card and `/projects/<slug>` page are generated)
 - `app/data/skills.js` lists the tech stack shown on the home page
 - `app/projects/[slug]/` renders the case study pages
