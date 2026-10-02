@@ -143,7 +143,7 @@ export default function Home() {
           <Card id="about" title="About" className="area-about">
             <div className="prose">
               <p>
-                I&apos;m a 2nd year BS Information Technology student at Western Institute of Technology and an aspiring
+                I&apos;m a 3rd year BS Information Technology student at Western Institute of Technology and an aspiring
                 full-stack developer based in Iloilo City. I enjoy building clean, responsive interfaces backed by
                 practical, reliable backends.
               </p>

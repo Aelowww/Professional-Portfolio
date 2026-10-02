@@ -109,7 +109,7 @@ export const projects = [
     title: "Teech",
     category: "Consultation Booking System",
     year: "2026",
-    role: "Head Full-Stack Developer (team project)",
+    role: "Head Full-Stack Developer",
     type: "Mobile-first web app",
     status: "In development",
     summary:

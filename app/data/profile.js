@@ -23,10 +23,10 @@ export const socialLinks = [
 // Work and education in one timeline, newest first. The first entry is marked as current.
 // Months before Mar 2026 are approximate.
 export const timeline = [
-  { year: "Sep 2026", title: "Head Full-Stack Developer", detail: "Teech · school consultation booking project" },
-  { year: "Jul 2026", title: "Technical Support", detail: "iQor · router and satellite TV troubleshooting" },
-  { year: "Apr 2026", title: "Technical Support", detail: "Transcom · telecommunication systems troubleshooting" },
-  { year: "Mar 2026", title: "Project Manager", detail: "School web application project" },
+  { year: "Sep 2026", title: "Head Full-Stack Developer", detail: "Teech · school web application project, consultation booking system" },
+  { year: "Jul 2026", title: "Network & Broadband Technical Associate", detail: "iQor · Bell internet, router and satellite TV configuration" },
+  { year: "Apr 2026", title: "Telecommunication Associate", detail: "Transcom · Xfinity Mobile device and phone plan troubleshooting" },
+  { year: "Mar 2026", title: "Project Manager", detail: "KonektBarangay · school web application project, barangay e-services platform" },
   { year: "Jun 2025", title: "Operations Associate", detail: "Sagility · healthcare scheduling systems" },
   { year: "Aug 2024", title: "BS Information Technology", detail: "Western Institute of Technology · shifted from Civil Engineering" },
   { year: "Jan 2024", title: "Started Programming", detail: "Began learning programming fundamentals" },
