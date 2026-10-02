@@ -43,6 +43,27 @@ export const education = [
 
 export const certificates = [
   {
+    title: "Front-End Development Libraries V8",
+    issuer: "freeCodeCamp",
+    year: "2026",
+    link: "/certificates/front-end-development-libraries-v8/view",
+    previewImage: "/Certificates/FRONT-END%20DEVELOPMENT%20LIBRARIES%20V8.png"
+  },
+  {
+    title: "Legacy JavaScript Algorithms and Data Structures V7",
+    issuer: "freeCodeCamp",
+    year: "2026",
+    link: "/certificates/legacy-javascript-algorithms-v7/view",
+    previewImage: "/Certificates/LEGACY%20JAVASCRIPT%20ALGORITHMS%20AND%20DATA%20STRUCTURES%20V7.png"
+  },
+  {
+    title: "Legacy Responsive Web Design V8",
+    issuer: "freeCodeCamp",
+    year: "2026",
+    link: "/certificates/legacy-responsive-web-design-v8/view",
+    previewImage: "/Certificates/LEGACY%20RESPONSIVE%20WEB%20DESIGN%20V8.png"
+  },
+  {
     title: "Front-End Development Libraries",
     issuer: "freeCodeCamp",
     year: "2026",
