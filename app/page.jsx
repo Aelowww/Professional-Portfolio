@@ -13,9 +13,9 @@ const personStructuredData = {
   name: profile.name,
   url: "https://carltaberna.vercel.app",
   image: `https://carltaberna.vercel.app${profile.photo}`,
-  jobTitle: "Aspiring Full-Stack Developer",
+  jobTitle: "Aspiring Web Developer",
   description:
-    "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring full-stack developer based in Iloilo City, Philippines.",
+    "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer based in Iloilo City, Philippines.",
   address: { "@type": "PostalAddress", addressLocality: "Iloilo City", addressCountry: "PH" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Western Institute of Technology" },
   sameAs: socialLinks.map((link) => link.href)
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
 
           <div className="profile-pitch">
-            <p className="profile-tagline">I build clean, modern web experiences with strong full-stack fundamentals.</p>
+            <p className="profile-tagline">I build clean, modern web experiences with solid web development fundamentals.</p>
             <a className="status" href={`mailto:${profile.email}`}>
               <span className="status-main">
                 <span className="status-dot" aria-hidden="true" />

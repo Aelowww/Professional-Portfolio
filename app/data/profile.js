@@ -2,7 +2,7 @@
 
 export const profile = {
   name: "Carl Gemuel Taberna",
-  role: "Aspiring Full-Stack Developer",
+  role: "Aspiring Web Developer",
   subRole: "BSIT Student",
   location: "Iloilo City, Philippines",
   locationLink: "https://www.google.com/maps/search/?api=1&query=Iloilo+City+Philippines",
@@ -23,7 +23,7 @@ export const socialLinks = [
 // Newest first. The first entry of each list is marked as current.
 // `icon` is a key in the timeline icon set on the home page.
 export const experience = [
-  { year: "Sep 2026", title: "Head Full-Stack Developer", org: "Teech", icon: "code", detail: "Built a student–faculty consultation booking app (school project)." },
+  { year: "Sep 2026", title: "Head Web Developer", org: "Teech", icon: "code", detail: "Built a student–faculty consultation booking app (school project)." },
   { year: "Jul 2026", title: "Network & Broadband Technical Associate", org: "iQor · Bell Canada", icon: "router", detail: "Configured Bell internet, routers and satellite TV." },
   { year: "Apr 2026", title: "Telecommunication Associate", org: "Transcom · Xfinity", icon: "phone", detail: "Troubleshot Xfinity Mobile devices and phone plans." },
   { year: "Mar 2026", title: "Project Manager", org: "KonektBarangay", icon: "clipboard", detail: "Led planning and delivery of a barangay e-services app (school project)." },
