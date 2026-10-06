@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const suggestedPrompts = [
   "Tell me about your tech stack.",
-  "What is Teech?",
+  "What is DooGo?",
   "Are you open to internship?",
   "How can I contact you?"
 ];
