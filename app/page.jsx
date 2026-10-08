@@ -1,6 +1,5 @@
 import Link from "next/link";
 import BrandIcon from "./components/brand-icon";
-import CurrentlyTaking from "./components/currently-taking";
 import Marquee from "./components/marquee";
 import ProjectCard from "./components/project-card";
 import SiteShell from "./components/site-shell";
@@ -254,7 +253,7 @@ export default function Home() {
               }
             >
               <div className="project-grid">
-                {projects.slice(0, 3).map((project) => (
+                {projects.filter((project) => project.status !== "Ongoing").slice(0, 3).map((project) => (
                   <ProjectCard key={project.slug} project={project} />
                 ))}
               </div>
@@ -305,7 +304,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <CurrentlyTaking />
             </Card>
           </div>
 
