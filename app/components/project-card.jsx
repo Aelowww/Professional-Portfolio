@@ -51,7 +51,10 @@ export default function ProjectCard({ project }) {
           {project.title}
         </Link>
       </h3>
-      <span className="project-tile-meta">{project.category}</span>
+      <span className="project-tile-meta">
+        {project.category}
+        {project.status === "Ongoing" ? <span className="project-status">Ongoing</span> : null}
+      </span>
       <div className="project-tile-actions">
         <Link className="chip-link" href={caseStudy}>
           case study

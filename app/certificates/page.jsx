@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CurrentlyTaking from "../components/currently-taking";
 import SiteShell from "../components/site-shell";
 import { certificates } from "../data/profile";
 
@@ -38,6 +39,7 @@ export default function CertificatesPage() {
             </li>
           ))}
         </ul>
+        <CurrentlyTaking />
       </main>
     </SiteShell>
   );

@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
 import { projects } from "../../data/projects";
 import { skills } from "../../data/skills";
-import { certificates, education, experience } from "../../data/profile";
+import { certificates, currentlyTaking, education, experience } from "../../data/profile";
 
 const formatTimeline = (items) =>
   items.map((item) => `- ${item.year}: ${item.title}, ${item.org}${item.detail ? ` (${item.detail})` : ""}`).join("\n");
 const portfolioExperience = formatTimeline(experience);
 const portfolioEducation = formatTimeline(education);
 const portfolioCertificates = certificates.map((certificate) => `- ${certificate.title} (${certificate.issuer}, ${certificate.year})`).join("\n");
+const portfolioCurrentlyTaking = currentlyTaking.map((course) => `- ${course.title} (${course.issuer}), in progress`).join("\n");
 const portfolioSkills = skills.map((skill) => `${skill.name} (${skill.category})`).join(", ");
 const portfolioProjects = projects
   .map((project) => {
@@ -73,6 +74,9 @@ ${portfolioEducation}
 
 Certificates:
 ${portfolioCertificates}
+
+Currently taking:
+${portfolioCurrentlyTaking}
 
 Skills:
 - ${portfolioSkills}

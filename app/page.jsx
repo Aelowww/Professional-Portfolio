@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandIcon from "./components/brand-icon";
+import CurrentlyTaking from "./components/currently-taking";
 import Marquee from "./components/marquee";
 import ProjectCard from "./components/project-card";
 import SiteShell from "./components/site-shell";
@@ -125,7 +126,6 @@ function Timeline({ items }) {
     </ol>
   );
 }
-
 
 export default function Home() {
   const contactLinks = [
@@ -305,6 +305,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+              <CurrentlyTaking />
             </Card>
           </div>
 

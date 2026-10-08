@@ -50,11 +50,11 @@ export const certificates = [
     previewImage: "/Certificates/FRONT-END%20DEVELOPMENT%20LIBRARIES%20V8.png"
   },
   {
-    title: "Legacy JavaScript Algorithms and Data Structures V7",
-    issuer: "freeCodeCamp",
+    title: "Google Data Analytics",
+    issuer: "Google · Coursera",
     year: "2026",
-    link: "/certificates/legacy-javascript-algorithms-v7/view",
-    previewImage: "/Certificates/LEGACY%20JAVASCRIPT%20ALGORITHMS%20AND%20DATA%20STRUCTURES%20V7.png"
+    link: "/certificates/google-data-analytics/view",
+    previewImage: "/Certificates/GOOGLE%20DATA%20ANALYTICS%20CERTIFICATE.png"
   },
   {
     title: "Legacy Responsive Web Design V8",
@@ -62,6 +62,13 @@ export const certificates = [
     year: "2026",
     link: "/certificates/legacy-responsive-web-design-v8/view",
     previewImage: "/Certificates/LEGACY%20RESPONSIVE%20WEB%20DESIGN%20V8.png"
+  },
+  {
+    title: "Legacy JavaScript Algorithms and Data Structures V7",
+    issuer: "freeCodeCamp",
+    year: "2026",
+    link: "/certificates/legacy-javascript-algorithms-v7/view",
+    previewImage: "/Certificates/LEGACY%20JAVASCRIPT%20ALGORITHMS%20AND%20DATA%20STRUCTURES%20V7.png"
   },
   {
     title: "Front-End Development Libraries",
@@ -105,6 +112,12 @@ export const certificates = [
     link: "/certificates/relational-database/view",
     previewImage: "/Certificates/RELATIONAL%20DATABASE%20CERTIFICATE.png"
   }
+];
+
+// Certificate programs in progress, shown under the earned certificates.
+export const currentlyTaking = [
+  { title: "Legacy Full Stack", issuer: "freeCodeCamp" },
+  { title: "Google IT Support", issuer: "Google · Coursera" }
 ];
 
 // Square 720px crops of the Personal Portfolio gallery photos, in the same order.
