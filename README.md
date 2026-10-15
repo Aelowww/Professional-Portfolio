@@ -25,7 +25,7 @@ This project is the professional version of my developer portfolio. It uses a mi
 - Separate experience and education timelines
 - Tech stack with official brand logos
 - Project case studies with desktop/mobile previews and a screenshot viewer
-- Certificate pages and resume view
+- Certificates with verification links and details modals, plus a resume view
 - Light and dark themes
 - Built-in chatbot for quick portfolio questions
 - Sitemap and SEO metadata for better discoverability
@@ -42,7 +42,8 @@ Open `http://localhost:3000`.
 ## Project Structure
 
 - `app/page.jsx` contains the main landing page content
-- `app/data/profile.js` holds personal details, experience, education, certificates, and social links
+- `app/data/profile.js` holds personal details, experience, education, and social links
+- `app/data/certificates.js` holds every certificate and the courses in progress (add a certificate here and it shows up on the home page and `/certificates`)
 - `app/data/projects.js` holds every project and its case study (add a project here and its card and `/projects/<slug>` page are generated)
 - `app/data/skills.js` lists the tech stack shown on the home page
 - `app/projects/[slug]/` renders the case study pages

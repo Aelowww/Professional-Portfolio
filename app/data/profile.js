@@ -17,7 +17,7 @@ export const socialLinks = [
   { label: "github", name: "GitHub", href: "https://github.com/Aelowww" },
   { label: "instagram", name: "Instagram", href: "https://www.instagram.com/crlxgml/" },
   { label: "facebook", name: "Facebook", href: "https://www.facebook.com/cgtaberna.10" },
-  { label: "x", name: "X", href: "https://x.com/aelowww" }
+  { label: "discord", name: "Discord", href: "https://discord.com/users/938112803829592104" }
 ];
 
 // Newest first. The first entry of each list is marked as current.

@@ -17,7 +17,7 @@ const personStructuredData = {
   image: `https://carltaberna.vercel.app${profile.photo}`,
   jobTitle: "Aspiring Web Developer",
   description:
-    "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer based in Iloilo City, Philippines.",
+    "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer with a growing foundation in networking, based in Iloilo City, Philippines.",
   address: { "@type": "PostalAddress", addressLocality: "Iloilo City", addressCountry: "PH" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Western Institute of Technology" },
   sameAs: socialLinks.map((link) => link.href)
@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           <div className="profile-pitch">
-            <p className="profile-tagline">I build clean, modern web experiences with solid web development fundamentals.</p>
+            <p className="profile-tagline">I build clean, modern web experiences, backed by a growing foundation in networking.</p>
             <a className="status" href={`mailto:${profile.email}`}>
               <span className="status-main">
                 <span className="status-dot" aria-hidden="true" />
@@ -232,14 +232,16 @@ export default function Home() {
             <Card id="about" title="About" className="area-about">
               <div className="prose">
                 <p>
-                  I am a Bachelor of Science in Information Technology student with a growing focus on building modern,
-                  user-centered digital solutions. My interests span web development, mobile applications, and software
-                  engineering, and I continue to strengthen my skills through hands-on projects and continuous learning.
+                  I&apos;m a 3rd-year BS Information Technology student who builds full-stack web applications, from a
+                  café ordering system and barangay e-services to consultation booking and blood donation apps. I enjoy
+                  turning real-world problems into working products, and I keep sharpening my skills through hands-on projects
+                  and certifications like freeCodeCamp&apos;s Legacy Full-Stack.
                 </p>
                 <p>
-                  I enjoy using technology to solve real-world problems, whether that means improving everyday processes or
-                  turning ideas into working applications. I am currently seeking internship opportunities where I can
-                  contribute, learn from experienced teams, and continue growing as a professional developer.
+                  Alongside development, I&apos;m growing into networking. I&apos;ve completed Cisco&apos;s Network Technician
+                  Career Path, and my work configuring Bell internet, routers and satellite TV gave me hands-on experience
+                  troubleshooting real connectivity issues. I&apos;m looking for internship opportunities in web development or IT
+                  and networking where I can contribute, learn from experienced teams, and keep growing.
                 </p>
               </div>
             </Card>

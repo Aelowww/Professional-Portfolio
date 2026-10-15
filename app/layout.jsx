@@ -30,7 +30,7 @@ export const metadata = {
     default: "Carl Gemuel Taberna",
     template: "%s | Carl Gemuel Taberna"
   },
-  description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer based in Iloilo City, Philippines.",
+  description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer with a growing foundation in networking, based in Iloilo City, Philippines.",
   applicationName: "Carl Gemuel Taberna",
   authors: [{ name: "Carl Gemuel Taberna", url: "https://carltaberna.vercel.app" }],
   creator: "Carl Gemuel Taberna",
@@ -42,6 +42,8 @@ export const metadata = {
     "Iloilo developer",
     "BSIT student portfolio",
     "web developer portfolio",
+    "aspiring web developer",
+    "networking",
     "Next.js portfolio"
   ],
   alternates: {
@@ -49,7 +51,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Carl Gemuel Taberna",
-    description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer based in Iloilo City, Philippines.",
+    description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer with a growing foundation in networking, based in Iloilo City, Philippines.",
     url: "https://carltaberna.vercel.app",
     siteName: "Carl Gemuel Taberna",
     locale: "en_PH",
@@ -58,7 +60,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Carl Gemuel Taberna",
-    description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer based in Iloilo City, Philippines."
+    description: "Portfolio of Carl Gemuel Taberna, a BSIT student and aspiring web developer with a growing foundation in networking, based in Iloilo City, Philippines."
   },
   robots: {
     index: true,

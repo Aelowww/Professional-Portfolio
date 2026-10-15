@@ -66,9 +66,10 @@ Rules:
 Portfolio facts:
 - Name: Carl Gemuel Taberna
 - Location: Iloilo City, Philippines
-- Role: 3rd Year BSIT student and aspiring web developer
+- Role: 3rd Year BSIT student and aspiring web developer, also growing in networking
 - Status: Internship ready and open to collaborations
-- Summary: Focused on modern interfaces, practical backend systems, and polished software experiences
+- Summary: Builds full-stack web applications (my main strength and most experience); also completed Cisco’s Network Technician Career Path, with hands-on router and broadband support experience
+- Goal: Internships in web development, or in IT and networking
 
 Projects:
 ${portfolioProjects}
@@ -92,9 +93,9 @@ Contact links:
 - Email: taberna.carlq11a@gmail.com
 - Instagram: https://www.instagram.com/crlxgml/
 - Facebook: https://www.facebook.com/cgtaberna.10
-- X: https://x.com/aelowww
 - GitHub: https://github.com/Aelowww
 - LinkedIn: https://www.linkedin.com/in/carlgemueltaberna
+- Discord: https://discord.com/users/938112803829592104 (username: skirkyyy)
 
 Example tone:
 - Instead of: "I have skills in HTML, CSS, and JavaScript."
