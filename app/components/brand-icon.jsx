@@ -1,10 +1,17 @@
 import {
+  siCisco,
   siCss,
+  siD3,
+  siExpress,
   siFacebook,
   siFigma,
+  siFirebase,
   siGit,
   siGithub,
   siGmail,
+  siGnubash,
+  siGooglegemini,
+  siGooglesheets,
   siHtml5,
   siInstagram,
   siJavascript,
@@ -13,12 +20,19 @@ import {
   siNodedotjs,
   siPhp,
   siPostgresql,
+  siPython,
   siReact,
+  siSocketdotio,
+  siSqlite,
+  siSupabase,
+  siTailwindcss,
   siTypescript,
+  siVercel,
+  siVite,
   siX
 } from "simple-icons";
 
-// LinkedIn isn't in simple-icons, and "REST API" has no brand mark, so those two are drawn here.
+// LinkedIn and Tableau aren't in simple-icons, and "REST API" and "SQL" have no brand mark, so those are drawn here.
 const custom = {
   linkedin: {
     hex: "0A66C2",
@@ -27,6 +41,16 @@ const custom = {
   api: {
     hex: "6366F1",
     path: "M7.4 6.6 2 12l5.4 5.4 1.4-1.4L4.8 12l4-4-1.4-1.4Zm9.2 0-1.4 1.4 4 4-4 4 1.4 1.4L22 12l-5.4-5.4ZM13.1 4l-4.2 16h2l4.2-16h-2Z"
+  },
+  // Database cylinder.
+  sql: {
+    hex: "0EA5E9",
+    path: "M12 3c-4.4 0-8 1.3-8 3s3.6 3 8 3 8-1.3 8-3-3.6-3-8-3ZM4 8.5V12c0 1.7 3.6 3 8 3s8-1.3 8-3V8.5c-1.7 1.1-4.7 1.8-8 1.8s-6.3-.7-8-1.8ZM4 14.5V18c0 1.7 3.6 3 8 3s8-1.3 8-3v-3.5c-1.7 1.1-4.7 1.8-8 1.8s-6.3-.7-8-1.8Z"
+  },
+  // Simplified Tableau mark: a large cross with four small ones at the corners.
+  tableau: {
+    hex: "E97627",
+    path: "M11 6h2v5h5v2h-5v5h-2v-5H6v-2h5V6ZM3.9 2.5h1.2v1.4h1.4v1.2h-1.4V6.5h-1.2v-1.4H2.5v-1.2h1.4ZM18.9 2.5h1.2v1.4h1.4v1.2h-1.4V6.5h-1.2v-1.4H17.5v-1.2h1.4ZM3.9 17.5h1.2v1.4h1.4v1.2h-1.4V21.5h-1.2v-1.4H2.5v-1.2h1.4ZM18.9 17.5h1.2v1.4h1.4v1.2h-1.4V21.5h-1.2v-1.4H17.5v-1.2h1.4Z"
   }
 };
 
@@ -39,8 +63,22 @@ const icons = {
   nextjs: siNextdotjs,
   nodejs: siNodedotjs,
   php: siPhp,
+  tailwind: siTailwindcss,
+  vite: siVite,
+  express: siExpress,
+  python: siPython,
+  socketio: siSocketdotio,
   mongodb: siMongodb,
   postgresql: siPostgresql,
+  supabase: siSupabase,
+  firebase: siFirebase,
+  sqlite: siSqlite,
+  sheets: siGooglesheets,
+  d3: siD3,
+  bash: siGnubash,
+  vercel: siVercel,
+  gemini: siGooglegemini,
+  cisco: siCisco,
   git: siGit,
   figma: siFigma,
   github: siGithub,

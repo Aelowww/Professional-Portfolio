@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { CertificateRow } from "../components/certificate-card";
 import CurrentlyTaking from "../components/currently-taking";
 import SiteShell from "../components/site-shell";
-import { certificates } from "../data/profile";
+import { certificates } from "../data/certificates";
 
 export const metadata = {
   title: "Certificates",
@@ -21,21 +22,8 @@ export default function CertificatesPage() {
 
         <ul className="cert-gallery">
           {certificates.map((certificate) => (
-            <li key={certificate.title}>
-              <a className="cert-preview" href={certificate.link} target="_blank" rel="noreferrer">
-                <span className="cert-preview-frame">
-                  <img src={certificate.previewImage} alt={`${certificate.title} certificate`} loading="lazy" decoding="async" />
-                </span>
-                <span className="cert-preview-body">
-                  <span className="cert-title">{certificate.title}</span>
-                  <span className="cert-issuer">
-                    {certificate.issuer} · {certificate.year}
-                  </span>
-                </span>
-                <span className="cert-verify">
-                  view <span aria-hidden="true">↗</span>
-                </span>
-              </a>
+            <li key={certificate.name}>
+              <CertificateRow certificate={certificate} />
             </li>
           ))}
         </ul>

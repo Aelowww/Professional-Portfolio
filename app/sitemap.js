@@ -35,60 +35,6 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7
-    },
-    {
-      url: `${baseUrl}/certificates/html-fundamentals/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/javascript/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/responsive-web-design/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/front-end-development-libraries/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/relational-database/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/relational-database-v8/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/front-end-development-libraries-v8/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/legacy-javascript-algorithms-v7/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
-    },
-    {
-      url: `${baseUrl}/certificates/legacy-responsive-web-design-v8/view`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6
     }
   ];
 }

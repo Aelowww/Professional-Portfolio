@@ -1,13 +1,20 @@
 import { NextResponse } from "next/server";
 import { projects } from "../../data/projects";
 import { skills } from "../../data/skills";
-import { certificates, currentlyTaking, education, experience } from "../../data/profile";
+import { certificates, currentlyTaking } from "../../data/certificates";
+import { education, experience } from "../../data/profile";
 
 const formatTimeline = (items) =>
   items.map((item) => `- ${item.year}: ${item.title}, ${item.org}${item.detail ? ` (${item.detail})` : ""}`).join("\n");
 const portfolioExperience = formatTimeline(experience);
 const portfolioEducation = formatTimeline(education);
-const portfolioCertificates = certificates.map((certificate) => `- ${certificate.title} (${certificate.issuer}, ${certificate.year})`).join("\n");
+const portfolioCertificates = certificates
+  .map((certificate) => {
+    const note = certificate.statusNote ? `, ${certificate.statusNote}` : "";
+    const includes = certificate.includes ? `; includes ${certificate.includes.map((item) => item.name).join(", ")}` : "";
+    return `- ${certificate.name} (${certificate.issuer}, ${certificate.year}${note})${includes}`;
+  })
+  .join("\n");
 const portfolioCurrentlyTaking = currentlyTaking.map((course) => `- ${course.title} (${course.issuer}), in progress`).join("\n");
 const portfolioSkills = skills.map((skill) => `${skill.name} (${skill.category})`).join(", ");
 const portfolioProjects = projects

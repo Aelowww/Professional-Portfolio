@@ -1,4 +1,4 @@
-import { currentlyTaking } from "../data/profile";
+import { currentlyTaking } from "../data/certificates";
 
 // Certificate programs in progress, listed under the earned certificates.
 export default function CurrentlyTaking() {

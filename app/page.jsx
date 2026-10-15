@@ -3,7 +3,9 @@ import BrandIcon from "./components/brand-icon";
 import Marquee from "./components/marquee";
 import ProjectCard from "./components/project-card";
 import SiteShell from "./components/site-shell";
-import { certificates, education, experience, galleryPhotos, profile, socialLinks } from "./data/profile";
+import { CertificateThumb } from "./components/certificate-card";
+import { certificates } from "./data/certificates";
+import { education, experience, galleryPhotos, profile, socialLinks } from "./data/profile";
 import { projects } from "./data/projects";
 import { skillGroups, skills } from "./data/skills";
 
@@ -21,8 +23,8 @@ const personStructuredData = {
   sameAs: socialLinks.map((link) => link.href)
 };
 
-// Started programming in 2024 (see the "Started Programming Journey" experience entry).
-const codingSince = 2024;
+// Year the "Years coding" stat counts from.
+const codingSince = 2023;
 
 function MailIcon() {
   return (
@@ -135,12 +137,12 @@ export default function Home() {
   const stats = [
     {
       label: "Projects",
-      value: projects.length,
+      value: `${projects.length}+`,
       icon: <path d="M3 7.5A1.5 1.5 0 0 1 4.5 6h4l2 2h9A1.5 1.5 0 0 1 21 9.5v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-10Z" />
     },
     {
       label: "Certificates",
-      value: certificates.length,
+      value: `${certificates.length}+`,
       icon: (
         <>
           <circle cx="12" cy="9" r="5" />
@@ -291,16 +293,8 @@ export default function Home() {
             >
               <ul className="cert-thumbs">
                 {certificates.slice(0, 3).map((certificate) => (
-                  <li key={certificate.title}>
-                    <a href={certificate.link} target="_blank" rel="noreferrer">
-                      <span className="cert-thumb-frame">
-                        <img src={certificate.previewImage} alt="" loading="lazy" decoding="async" />
-                      </span>
-                      <strong>{certificate.title}</strong>
-                      <small>
-                        {certificate.issuer} · {certificate.year}
-                      </small>
-                    </a>
+                  <li key={certificate.name}>
+                    <CertificateThumb certificate={certificate} />
                   </li>
                 ))}
               </ul>
