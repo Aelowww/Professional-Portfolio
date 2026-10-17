@@ -45,9 +45,9 @@ export const certificates = [
     url: CREDLY_NETWORK_TECHNICIAN,
     status: "earned",
     previewImage: "/Certificates/NETWORK%20TECHNICIAN%20CAREER%20PATH.png",
-    // The courses have no badges of their own, so they link to the career path badge.
+    // Courses without a badge of their own link to the career path badge.
     includes: [
-      { name: "Networking Basics", url: CREDLY_NETWORK_TECHNICIAN },
+      { name: "Networking Basics", url: "https://www.credly.com/badges/857fe137-473f-4830-bfd8-513141fa3d76" },
       { name: "Networking Devices and Initial Configuration", url: CREDLY_NETWORK_TECHNICIAN },
       { name: "Network Addressing and Basic Troubleshooting", url: CREDLY_NETWORK_TECHNICIAN },
       { name: "Network Support and Security", url: CREDLY_NETWORK_TECHNICIAN }
