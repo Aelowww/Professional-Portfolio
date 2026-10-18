@@ -1,32 +1,34 @@
 // Core technologies used in my projects or covered by my certificates.
-// `logo` is a key in components/brand-icon.jsx.
+// `logo` is a key in components/brand-icon.jsx; networking concepts use line icons drawn there.
 export const skills = [
-  { name: "HTML", logo: "html", category: "frontend" },
-  { name: "CSS", logo: "css", category: "frontend" },
-  { name: "JavaScript", logo: "javascript", category: "frontend" },
-  { name: "TypeScript", logo: "typescript", category: "frontend" },
-  { name: "React", logo: "react", category: "frontend" },
-  { name: "Next.js", logo: "nextjs", category: "frontend" },
-  { name: "Tailwind CSS", logo: "tailwind", category: "frontend" },
-  { name: "Node.js", logo: "nodejs", category: "backend" },
-  { name: "Express", logo: "express", category: "backend" },
-  { name: "PHP", logo: "php", category: "backend" },
-  { name: "Python", logo: "python", category: "backend" },
-  { name: "PostgreSQL", logo: "postgresql", category: "database" },
-  { name: "MongoDB", logo: "mongodb", category: "database" },
-  { name: "Supabase", logo: "supabase", category: "database" },
-  { name: "Firebase", logo: "firebase", category: "database" },
-  { name: "Git", logo: "git", category: "other" },
-  { name: "GitHub", logo: "github", category: "other" },
-  { name: "Vercel", logo: "vercel", category: "other" },
-  { name: "Figma", logo: "figma", category: "other" },
-  { name: "Tableau", logo: "tableau", category: "other" },
-  { name: "Cisco Networking", logo: "cisco", category: "other" }
+  { name: "HTML", logo: "html", category: "web" },
+  { name: "CSS", logo: "css", category: "web" },
+  { name: "JavaScript", logo: "javascript", category: "web" },
+  { name: "TypeScript", logo: "typescript", category: "web" },
+  { name: "React", logo: "react", category: "web" },
+  { name: "Next.js", logo: "nextjs", category: "web" },
+  { name: "Tailwind CSS", logo: "tailwind", category: "web" },
+  { name: "Node.js", logo: "nodejs", category: "web" },
+  { name: "Express", logo: "express", category: "web" },
+  { name: "PHP", logo: "php", category: "web" },
+  { name: "Python", logo: "python", category: "web" },
+  { name: "PostgreSQL", logo: "postgresql", category: "web" },
+  { name: "MongoDB", logo: "mongodb", category: "web" },
+  { name: "Supabase", logo: "supabase", category: "web" },
+  { name: "Firebase", logo: "firebase", category: "web" },
+  { name: "Routing & Switching", logo: "routing", category: "networking" },
+  { name: "IPv4/IPv6 Addressing", logo: "addressing", category: "networking" },
+  { name: "DNS & DHCP", logo: "dns", category: "networking" },
+  { name: "Network Troubleshooting", logo: "troubleshooting", category: "networking" },
+  { name: "Cisco Packet Tracer", logo: "cisco", category: "networking" },
+  { name: "Figma", logo: "figma", category: "tools" },
+  { name: "Git", logo: "git", category: "tools" },
+  { name: "GitHub", logo: "github", category: "tools" },
+  { name: "Vercel", logo: "vercel", category: "tools" }
 ];
 
 export const skillGroups = [
-  { key: "frontend", label: "Frontend" },
-  { key: "backend", label: "Backend" },
-  { key: "database", label: "Databases" },
-  { key: "other", label: "Tools" }
+  { key: "web", label: "Web Development" },
+  { key: "networking", label: "Networking" },
+  { key: "tools", label: "Design & Tools" }
 ];

@@ -10,7 +10,7 @@ export const projects = [
     title: "Lore",
     category: "Coffee Shop Ordering & POS",
     year: "2026",
-    role: "Web Developer",
+    role: "Full-stack Developer",
     type: "Web app",
     status: "Ongoing",
     summary:
@@ -113,7 +113,7 @@ export const projects = [
     title: "KonektBarangay",
     category: "E-Services Platform",
     year: "2026",
-    role: "Web Developer",
+    role: "Project Manager & Full-stack Developer",
     type: "Web application",
     status: "Live",
     summary:
@@ -125,6 +125,35 @@ export const projects = [
     ],
     link: "https://konektbarangay.vercel.app/",
     repo: "https://github.com/Aelowww/KonektBarangay",
+    prototype: "https://www.figma.com/design/S2vxfCGFT6ACSbCQaG8job/KonektBarangay-Prototype",
+    // Phone frames exported from the Figma file, shown in the case study design section.
+    designFrames: [
+      { src: "/projects/konektbarangay/design-dashboard.webp", alt: "Figma design: resident dashboard on mobile" },
+      { src: "/projects/konektbarangay/design-request-document.webp", alt: "Figma design: request document on mobile" },
+      { src: "/projects/konektbarangay/design-set-appointment.webp", alt: "Figma design: set appointment on mobile" },
+      { src: "/projects/konektbarangay/design-request-details.webp", alt: "Figma design: request details on mobile" }
+    ],
+    featured: {
+      summary: "Barangay e-services online: verified residents request documents and book claim schedules, and staff process them from an admin dashboard.",
+      built: [
+        "Led planning and delivery as Project Manager",
+        "Built the app on Next.js and TypeScript, with Supabase for sign-in, the database, file storage and realtime updates",
+        "Wrote the row-level security rules and database triggers that keep admin roles and approvals staff-only",
+        "Built the three-step document request flow, resident ID verification and the admin tools"
+      ],
+      teamProject: true,
+      features: ["Resident ID verification", "Guided document requests", "Appointment calendar", "Admin tools"],
+      decisions: [
+        { decision: "Enforce access in the database with row-level security", why: "The rules hold even if someone calls the API directly, not just when they use the app." },
+        { decision: "Save a request only after the resident confirms the summary", why: "Residents review the document, date and time before anything reaches staff." },
+        { decision: "Keep ID photos in a private bucket with short-lived signed links", why: "Staff can verify residents without the IDs ever being publicly reachable." }
+      ],
+      design: [
+        "A shared app shell gives residents and staff the same navigation on phone and desktop.",
+        "The layout is built for phones first, since most residents are expected to use one."
+      ],
+      results: []
+    },
     techStack: [
       { name: "Next.js", purpose: "App Router pages and a proxy that guards resident and admin routes" },
       { name: "TypeScript", purpose: "Typed pages, shared document and community models" },
@@ -225,7 +254,7 @@ export const projects = [
     title: "Awesome ToDo's",
     category: "Student Planner",
     year: "2026",
-    role: "Web Developer",
+    role: "Full-stack Developer",
     type: "Web app (PWA)",
     status: "Live",
     summary:
@@ -318,7 +347,7 @@ export const projects = [
     title: "DooGo",
     category: "Blood Donation Platform",
     year: "2026",
-    role: "Web Developer",
+    role: "Project Manager & Full-stack Developer",
     type: "Web app",
     status: "Live",
     summary:
@@ -330,6 +359,35 @@ export const projects = [
     ],
     link: "https://doogo.vercel.app/",
     repo: "https://github.com/Aelowww/DooGo",
+    prototype: "https://www.figma.com/design/WJhNU8WCISEcN8gyjfATeS/DooGo-Prototype",
+    // Phone frames exported from the Figma file, shown in the case study design section.
+    designFrames: [
+      { src: "/projects/doogo/design-dashboard.webp", alt: "Figma design: dashboard on mobile" },
+      { src: "/projects/doogo/design-request-blood.webp", alt: "Figma design: request blood form on mobile" },
+      { src: "/projects/doogo/design-search-donors.webp", alt: "Figma design: compatible donors on mobile" },
+      { src: "/projects/doogo/design-chat.webp", alt: "Figma design: chat conversation on mobile" }
+    ],
+    featured: {
+      summary: "A blood donation app that matches people who need blood with compatible, verified donors nearby.",
+      built: [
+        "Led planning and delivery as Project Manager",
+        "Built the app on Next.js, TypeScript and Firebase",
+        "Wrote the shared donation-rules module: compatibility, waiting periods and one unit per donor",
+        "Moved enforcement into Firestore security rules so every write is validated"
+      ],
+      teamProject: true,
+      features: ["Blood requests", "Real donation rules", "Bag-by-bag progress", "Verified donors"],
+      decisions: [
+        { decision: "Use Firestore security rules as the enforcement layer", why: "The free Firebase plan has no server code, so the rules validate every write instead." },
+        { decision: "Keep all donation rules in one shared module", why: "Every screen applies the same compatibility and waiting-period rules." },
+        { decision: "Check eligibility against the needed-by date, not today", why: "A recovering donor can still help if they'll be ready in time." }
+      ],
+      design: [
+        "Phone and desktop get separate layouts at the same URLs; the desktop one adds a branded header and breadcrumbs.",
+        "The dashboard gives seekers and donors equal weight, with \"Request blood\" and \"Donate blood\" side by side."
+      ],
+      results: []
+    },
     techStack: [
       { name: "Next.js", purpose: "App Router pages and a proxy that serves the mobile or desktop layout at the same URLs" },
       { name: "TypeScript", purpose: "Typed screens, data models and donation rules" },
@@ -423,7 +481,7 @@ export const projects = [
     title: "Teech",
     category: "Consultation Booking System",
     year: "2026",
-    role: "Head Web Developer",
+    role: "Full-stack Developer",
     type: "Web app",
     status: "Live",
     summary:
@@ -435,6 +493,23 @@ export const projects = [
     ],
     link: "https://teech-app.vercel.app/",
     repo: "https://github.com/Aelowww/Teech",
+    prototype: null,
+    featured: {
+      summary: "A consultation booking system where students request open faculty slots and faculty confirm or decline them.",
+      built: ["Led web development as Head Web Developer", "Built most of the app myself, from the front end to the back end"],
+      teamProject: true,
+      features: ["Slot-based booking", "Request tracking", "Faculty tools", "Streaks, points and badges"],
+      decisions: [
+        { decision: "Build the mobile version first", why: "Students mostly use their phones." },
+        { decision: "Put booking rules in Postgres triggers and row-level security", why: "App-side checks can be skipped by direct API calls, and two students booking at once could both pass them." },
+        { decision: "Serve mobile and desktop layouts at the same URLs", why: "The desktop version could roll out page by page until it was complete." }
+      ],
+      design: [
+        "Designed mobile first, with a full desktop layout served at the same URLs.",
+        "Booking is split into four short steps (date, time, details, review), and faculty show a live status before students book."
+      ],
+      results: []
+    },
     techStack: [
       { name: "Next.js", purpose: "Pages, API routes, and a proxy for sign-in checks and phone vs computer routing" },
       { name: "TypeScript", purpose: "Typed pages, helpers and API routes" },
@@ -704,3 +779,6 @@ export function getProject(slug) {
 export function isExternalLink(href) {
   return Boolean(href) && /^https?:\/\//.test(href);
 }
+
+// The three projects shown on the home page, in this order. The rest are under "See all".
+export const homeProjects = ["konektbarangay", "awesome-todos", "doogo"].map(getProject);

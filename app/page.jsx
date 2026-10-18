@@ -1,12 +1,11 @@
 import Link from "next/link";
 import BrandIcon from "./components/brand-icon";
-import Marquee from "./components/marquee";
 import ProjectCard from "./components/project-card";
 import SiteShell from "./components/site-shell";
 import { CertificateThumb } from "./components/certificate-card";
 import { certificates } from "./data/certificates";
 import { education, experience, galleryPhotos, profile, socialLinks } from "./data/profile";
-import { projects } from "./data/projects";
+import { homeProjects, projects } from "./data/projects";
 import { skillGroups, skills } from "./data/skills";
 
 const personStructuredData = {
@@ -200,7 +199,7 @@ export default function Home() {
           </div>
 
           <div className="profile-pitch">
-            <p className="profile-tagline">I build clean, modern web experiences, backed by a growing foundation in networking.</p>
+            <p className="profile-tagline">Full-stack web developer with hands-on networking experience.</p>
             <a className="status" href={`mailto:${profile.email}`}>
               <span className="status-main">
                 <span className="status-dot" aria-hidden="true" />
@@ -257,7 +256,7 @@ export default function Home() {
               }
             >
               <div className="project-grid">
-                {projects.filter((project) => project.status !== "Ongoing").slice(0, 3).map((project) => (
+                {homeProjects.map((project) => (
                   <ProjectCard key={project.slug} project={project} />
                 ))}
               </div>
@@ -327,13 +326,13 @@ export default function Home() {
           </div>
 
           <Card id="gallery" title="Beyond Coding" className="area-gallery">
-            <Marquee label="Personal photos" className="photo-strip" duration={40} repeat={2}>
-              {galleryPhotos.map((src, index) => (
+            <ul className="photo-grid">
+              {galleryPhotos.slice(0, 6).map((src, index) => (
                 <li key={src}>
-                  <img src={src} alt={`Personal photo ${index + 1}`} loading="lazy" decoding="async" />
+                  <img src={src} alt={`Personal photo ${index + 1}`} width="720" height="720" loading="lazy" decoding="async" />
                 </li>
               ))}
-            </Marquee>
+            </ul>
           </Card>
         </div>
       </main>

@@ -1,5 +1,3 @@
-/* Minimal monochrome theme in a bento-card layout: tokens, shell, home cards, shared components. */
-
 :root,
 :root[data-theme="light"] {
   --bg: #ffffff;
@@ -332,27 +330,27 @@ a { color: inherit; }
 /* ---------- Bento grid ---------- */
 
 .bento {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   /* Main column: about, projects, stack, certificates. Side column: experience, education, social. */
   grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
-  gap: 16px;
+  gap: 24px;
   align-items: start;
 }
 .bento-main,
-.bento-side { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+.bento-side { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; min-width: 0; }
 .area-gallery { grid-column: 1 / -1; }
 
 .card {
   min-width: 0;
-  padding: 22px 24px 24px;
+  padding: 28px 32px 32px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--bg);
   scroll-margin-top: calc(var(--topbar-height) + 16px);
 }
-.card-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 16px; }
-.card-header h2 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.card-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.card-header h2 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
 .card-action { color: var(--muted); font-size: 12.5px; text-decoration: none; white-space: nowrap; }
 .card-action:hover { color: var(--text); }
 
@@ -390,36 +388,19 @@ a { color: inherit; }
 .timeline-year { flex: 0 0 auto; color: var(--muted); font-family: var(--font-mono), ui-monospace, monospace; font-size: 11px; }
 .timeline li.is-current .timeline-year {
   padding: 1px 7px;
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: color-mix(in srgb, #22c55e 16%, transparent);
-  color: #16a34a;
-}
-
-
-/* Sliding row (gallery). The track holds two copies and moves by one. */
-.marquee {
-  --marquee-gap: 6px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
-}
-.marquee-track { display: flex; width: max-content; animation: marquee var(--marquee-duration, 30s) linear infinite; }
-.marquee-reverse .marquee-track { animation-direction: reverse; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-group { list-style: none; margin: 0; padding: 0 var(--marquee-gap) 0 0; display: flex; gap: var(--marquee-gap); }
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  color: var(--text-soft);
 }
 
 /* Tech stack */
 .stack { display: grid; grid-template-columns: minmax(0, 1fr); }
-/* Label on the left, chips on the right, one row per group */
-.stack-group { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; align-items: center; min-width: 0; padding: 9px 0; border-top: 1px solid var(--line); }
+/* Label on the left, chips on the right, one row per track */
+.stack-group { display: grid; grid-template-columns: 136px minmax(0, 1fr); gap: 16px; align-items: start; min-width: 0; padding: 16px 0; border-top: 1px solid var(--line); }
 .stack-group:first-child { padding-top: 0; border-top: 0; }
 .stack-group:last-child { padding-bottom: 0; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.stack-group h3 { margin: 0; color: var(--muted); font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.stack-group h3 { margin: 0; padding-top: 5px; color: var(--muted); font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .chips li {
   display: inline-flex;
   align-items: center;
@@ -433,8 +414,6 @@ a { color: inherit; }
 }
 
 .chips .brand-icon { width: 13px; height: 13px; flex: 0 0 auto; }
-.chips li { transition: border-color 150ms ease, transform 150ms ease; }
-.chips li:hover { border-color: var(--line-strong); transform: translateY(-1px); }
 
 /* Projects */
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
@@ -554,16 +533,15 @@ a { color: inherit; }
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
-  transition: border-color 150ms ease, color 150ms ease, transform 150ms ease;
+  transition: border-color 150ms ease, color 150ms ease;
 }
-.social-tiles a:hover { border-color: var(--line-strong); color: var(--text); transform: translateY(-1px); }
+.social-tiles a:hover { border-color: var(--line-strong); color: var(--text); }
 .social-tiles svg { width: 18px; height: 18px; flex: 0 0 auto; }
 
-/* Beyond coding */
-.photo-strip { --marquee-gap: 8px; }
-.photo-strip li { flex: 0 0 auto; width: 150px; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: var(--surface); }
-.photo-strip img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 400ms ease; }
-.photo-strip li:hover img { transform: scale(1.04); }
+/* Beyond coding: up to six square photos with one muted treatment */
+.photo-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.photo-grid li { aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: var(--surface); }
+.photo-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* ---------- Sub pages ---------- */
 
@@ -821,7 +799,7 @@ button.chip-link { border: 0; font: inherit; font-size: 11.5px; cursor: pointer;
 }
 
 @media (max-width: 900px) {
-  .photo-strip li { width: 120px; }
+  .photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cert-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .social-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
@@ -862,13 +840,18 @@ button.chip-link { border: 0; font: inherit; font-size: 11.5px; cursor: pointer;
 }
 
 @media (max-width: 640px) {
-  .stack-group { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+  .stack-group { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .stack-group h3 { padding-top: 0; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .bento,
+  .bento-main,
+  .bento-side { gap: 16px; }
   :root { --page-gutter: 32px; }
   body { font-size: 14.5px; }
   .shell > main { padding-top: 24px; }
   .cert-thumbs { gap: 8px; }
-  .cert-thumbs strong { font-size: 11.5px; }
   .social-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cert-thumbs strong { font-size: 11.5px; }
   /* Photo beside name, location and role; buttons and everything after span the full width */
   .profile { grid-template-columns: 96px minmax(0, 1fr); gap: 4px 16px; }
   .profile-info { display: contents; }
@@ -895,6 +878,4 @@ button.chip-link { border: 0; font: inherit; font-size: 11.5px; cursor: pointer;
   *,
   *::before,
   *::after { transition-duration: 0ms !important; animation: none !important; }
-  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
-  .marquee-group[aria-hidden="true"] { display: none; }
 }

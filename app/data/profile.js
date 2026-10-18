@@ -24,11 +24,11 @@ export const socialLinks = [
 // `icon` is a key in the timeline icon set on the home page.
 export const experience = [
   { year: "Sep 2026", title: "Head Web Developer", org: "Teech", icon: "code", detail: "Built a student–faculty consultation booking app (school project)." },
-  { year: "Jun 2026", title: "Network & Broadband Technical Associate", org: "iQor · Bell Canada", icon: "router", detail: "Configured Bell internet, routers and satellite TV." },
-  { year: "Apr 2026", title: "Telecommunication Associate", org: "Transcom · Xfinity", icon: "phone", detail: "Troubleshot Xfinity Mobile devices and phone plans." },
-  { year: "Mar 2026", title: "Project Manager", org: "KonektBarangay", icon: "clipboard", detail: "Led planning and delivery of a barangay e-services app (school project)." },
+  { year: "Jun 2026", title: "Network & Broadband Technical Associate", org: "iQor · Bell Canada", icon: "router", detail: "Configured and troubleshot Bell internet connections, home routers and satellite TV service." },
+  { year: "Apr 2026", title: "Telecommunication Associate", org: "Transcom · Xfinity", icon: "phone", detail: "Troubleshot Xfinity Mobile devices, mobile data connectivity and phone plan issues." },
+  { year: "Jan 2026", title: "Project Manager", org: "KonektBarangay", icon: "clipboard", detail: "Led planning and delivery of a barangay e-services app (school project)." },
   { year: "Nov 2024", title: "Operations Associate", org: "Sagility · Iloilo City", icon: "calendar", detail: "Managed healthcare appointment and scheduling systems." },
-  { year: "Jan 2024", title: "Started Programming Journey", org: "Self-taught", icon: "terminal", detail: "Learned programming basics and built practice projects." },
+  { year: "Jul 2024", title: "Started Programming Journey", org: "Self-taught", icon: "terminal", detail: "Learned programming basics and built practice projects." },
   { year: "Nov 2023", title: "Operations Associate", org: "WNS · Iloilo City", icon: "plane", detail: "Handled travel reservation systems and booking issues." }
 ];
 
@@ -40,7 +40,7 @@ export const education = [
   { year: "2016", title: "Elementary", org: "Bito-on Elementary School", icon: "school" }
 ];
 
-// Square 720px crops of the Personal Portfolio gallery photos, in the same order.
+// Square 720px crops of the Personal Portfolio gallery photos, in the same order. The home page shows the first 6.
 export const galleryPhotos = [
   "/photos/photo-1.webp",
   "/photos/photo-5.webp",

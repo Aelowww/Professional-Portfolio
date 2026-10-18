@@ -22,6 +22,11 @@ export function ProjectLinks({ project }) {
           source code <span aria-hidden="true">↗</span>
         </a>
       ) : null}
+      {project.prototype ? (
+        <a href={project.prototype} target="_blank" rel="noreferrer">
+          prototype <span aria-hidden="true">↗</span>
+        </a>
+      ) : null}
     </div>
   );
 }
