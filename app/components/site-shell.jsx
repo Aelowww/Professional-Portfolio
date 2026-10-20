@@ -3,7 +3,6 @@ import MobileMenu from "./mobile-menu";
 import ThemeToggle from "./theme-toggle";
 import { navSections, profile } from "../data/profile";
 
-// Slim top bar + centered page container shared by every content page.
 export default function SiteShell({ children, narrow = false }) {
   const year = new Date().getFullYear();
 

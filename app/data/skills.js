@@ -1,5 +1,3 @@
-// Core technologies used in my projects or covered by my certificates.
-// `logo` is a key in components/brand-icon.jsx; networking concepts use line icons drawn there.
 export const skills = [
   { name: "HTML", logo: "html", category: "web" },
   { name: "CSS", logo: "css", category: "web" },

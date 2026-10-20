@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 const external = { target: "_blank", rel: "noopener noreferrer" };
 
-// Same arrow as the project "case study" chip.
 function ArrowRightIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -17,7 +16,6 @@ function issuedLine(certificate) {
   return `${certificate.issuer} · ${certificate.year}`;
 }
 
-// Certificate image, or a text placeholder when there is no image yet.
 function CertificatePreview({ certificate }) {
   if (certificate.previewImage) {
     return <img src={certificate.previewImage} alt="" loading="lazy" decoding="async" />;
@@ -51,7 +49,6 @@ function IncludesList({ includes }) {
   );
 }
 
-// "Verify certificate" goes to the issuer's verification page; "Details" opens the modal.
 function CertificateActions({ certificate, onDetails }) {
   return (
     <div className="cert-actions">
@@ -70,7 +67,6 @@ function CertificateActions({ certificate, onDetails }) {
   );
 }
 
-// Modal with the certificate overview and the certificates it includes.
 function CertificateDialog({ certificate, open, onClose }) {
   const dialogRef = useRef(null);
 
@@ -121,7 +117,6 @@ function useCertificateDialog(certificate) {
   };
 }
 
-// Full-width row on the /certificates page.
 export function CertificateRow({ certificate }) {
   const details = useCertificateDialog(certificate);
 
@@ -141,7 +136,6 @@ export function CertificateRow({ certificate }) {
   );
 }
 
-// Compact tile in the home page certificates card.
 export function CertificateThumb({ certificate }) {
   const details = useCertificateDialog(certificate);
 

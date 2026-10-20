@@ -16,7 +16,6 @@ function ArrowIcon({ direction }) {
   );
 }
 
-// Full-screen screenshot viewer. `index` is null when closed.
 export default function ScreenshotLightbox({ title, images, index, onChange, onClose }) {
   const dialogRef = useRef(null);
   const isOpen = index !== null && images.length > 0;

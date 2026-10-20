@@ -1,6 +1,5 @@
 "use client";
 
-// Rendered without the root layout, so styles are inline.
 const bodyStyle = {
   margin: 0,
   minHeight: "100vh",

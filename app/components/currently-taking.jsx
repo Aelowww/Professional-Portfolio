@@ -1,6 +1,5 @@
 import { currentlyTaking } from "../data/certificates";
 
-// Certificate programs in progress, listed under the earned certificates.
 export default function CurrentlyTaking() {
   return (
     <div className="cert-progress">

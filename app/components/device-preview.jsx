@@ -29,16 +29,12 @@ function ExpandIcon() {
   );
 }
 
-// Internal links ("/") are this site; projects without a live link show no address.
 function displayHost(link) {
   if (!link) return null;
   if (!/^https?:\/\//.test(link)) return "carltaberna.vercel.app";
   return new URL(link).host;
 }
 
-// Shows a project's cover inside a browser or phone frame, with a
-// Desktop/Mobile switch when both captures exist (mobile-only projects start
-// on the phone frame). Clicking opens the lightbox.
 export default function DevicePreview({ project, size = "card" }) {
   const { cover, gallery = [], title, link } = project;
   const hasBoth = Boolean(cover.desktop && cover.mobile);

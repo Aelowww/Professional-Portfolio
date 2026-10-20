@@ -22,7 +22,6 @@ const personStructuredData = {
   sameAs: socialLinks.map((link) => link.href)
 };
 
-// Year the "Years coding" stat counts from.
 const codingSince = 2023;
 
 function MailIcon() {
@@ -46,7 +45,6 @@ function Card({ id, title, action, className = "", children }) {
   );
 }
 
-// Line icons for experience and education rows, keyed by `icon` in data/profile.js.
 const timelineIcons = {
   code: <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" />,
   router: (
@@ -102,7 +100,6 @@ const timelineIcons = {
   )
 };
 
-// Compact rows: icon, role and place, date. The first row is marked current.
 function Timeline({ items }) {
   return (
     <ol className="timeline">

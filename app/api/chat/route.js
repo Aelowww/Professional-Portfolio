@@ -183,7 +183,6 @@ export async function POST(request) {
         temperature: 0.75,
         topP: 0.9,
         maxOutputTokens: 640,
-        // Short portfolio answers do not need thinking, and thinking tokens count against maxOutputTokens
         thinkingConfig: { thinkingBudget: 0 }
       }
     })

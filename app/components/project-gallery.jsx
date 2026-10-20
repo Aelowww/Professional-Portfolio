@@ -3,7 +3,6 @@
 import { useState } from "react";
 import ScreenshotLightbox from "./screenshot-lightbox";
 
-// Filters use an image's `group` (e.g. student/faculty) when set, otherwise its viewport.
 const filterLabels = {
   all: "All",
   desktop: "Desktop",

@@ -1,7 +1,3 @@
-/* Case study pages, device previews, screenshot gallery and lightbox. */
-
-/* ---------- Device preview ---------- */
-
 .device-preview { display: grid; gap: 12px; justify-items: center; min-width: 0; margin-top: 40px; }
 
 .device-stage {
@@ -62,10 +58,8 @@
   text-overflow: ellipsis;
 }
 .browser-screen { flex: 1 1 auto; min-height: 0; overflow: hidden; background: #fff; }
-/* Keep the full page width visible; only the bottom of the capture gets cropped. */
 .browser-screen img { display: block; width: 100%; height: auto; }
 
-/* Absolutely positioned so its height comes from the stage and the width follows the aspect ratio. */
 .phone-frame {
   position: absolute;
   top: clamp(14px, 3vw, 28px);
@@ -121,7 +115,6 @@
   .device-expand { opacity: 1; }
 }
 
-/* Segmented controls: preview size + gallery filters */
 .viewport-switch,
 .gallery-filters {
   display: inline-flex;
@@ -150,8 +143,6 @@
 .gallery-filters button:hover { color: var(--text); }
 .viewport-switch button[aria-pressed="true"],
 .gallery-filters button[aria-pressed="true"] { background: var(--surface-hover); color: var(--text); }
-
-/* ---------- Case study ---------- */
 
 .case-header { display: grid; gap: 14px; }
 .case-header .page-lead { margin-top: 0; }
@@ -216,13 +207,11 @@
 }
 .challenges dd { margin: 0; color: var(--text-soft); font-size: 14px; line-height: 1.6; }
 
-/* Name + description rows (stack, team) */
 .rows { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
 .row-two { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
 .row-title { font-weight: 500; }
 .row-org { color: var(--text-soft); line-height: 1.6; }
 
-/* Featured case studies */
 .case-role { margin-bottom: 12px; color: var(--text); font-weight: 500; }
 .case-role span { color: var(--muted); font-weight: 400; }
 .decisions { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: decision; }
@@ -237,7 +226,6 @@
 }
 .decisions p { margin-top: 4px; padding-left: 28px; color: var(--text-soft); font-size: 14px; line-height: 1.6; }
 .case-design { display: grid; gap: 16px; }
-/* Phone frames exported from Figma, four across */
 .design-board { margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .design-board ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .design-board li { overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
@@ -247,7 +235,6 @@
 .design-board figcaption a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 .case-design-notes { margin-top: 20px; }
 
-/* Gallery */
 .project-gallery { display: grid; gap: 16px; }
 .gallery-filters { justify-self: start; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
 .gallery-filters button { flex: 0 0 auto; }
@@ -293,7 +280,6 @@
 .gallery-thumb:hover .gallery-thumb-frame { border-color: var(--line-strong); }
 .gallery-thumb-caption { color: var(--muted); font-size: 12.5px; line-height: 1.45; }
 
-/* Previous / next */
 .pager {
   margin-top: 88px;
   display: grid;
@@ -305,8 +291,6 @@
 .pager-next { text-align: right; }
 .pager-title { font-size: 15px; font-weight: 500; }
 .pager a:hover .pager-title { text-decoration: underline; text-underline-offset: 4px; }
-
-/* ---------- Lightbox ---------- */
 
 html.lightbox-open { overflow: hidden; }
 
@@ -380,8 +364,6 @@ html.lightbox-open { overflow: hidden; }
 .lightbox-close { top: 16px; right: 20px; }
 
 @keyframes lightboxIn { from { opacity: 0; } to { opacity: 1; } }
-
-/* ---------- Responsive ---------- */
 
 @media (max-width: 640px) {
   .device-stage { aspect-ratio: 4 / 3.4; padding: 10px; }

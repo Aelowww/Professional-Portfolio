@@ -31,8 +31,6 @@ export function ProjectLinks({ project }) {
   );
 }
 
-// Project tile for the home grid; the whole tile opens the case study.
-// Shows the desktop screenshot with the mobile one in a phone frame on top.
 export default function ProjectCard({ project }) {
   const { desktop, mobile } = project.cover;
   const cover = desktop ?? mobile;
@@ -40,7 +38,6 @@ export default function ProjectCard({ project }) {
 
   const caseStudy = `/projects/${project.slug}`;
 
-  // The title link stretches over the whole tile; the action links sit above it.
   return (
     <article className="project-tile">
       <span className={`project-thumb${isPhoneCover ? " project-thumb-phone" : ""}`}>

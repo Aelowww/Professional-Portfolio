@@ -1,18 +1,3 @@
-// Certificates shown on the home page and /certificates. Add or edit certificates here only.
-// The home page shows the first three; the rest appear on the "See all" page.
-//
-// Each entry:
-//   name                name shown on the card
-//   overview            short description shown in the Details modal
-//   issuer              issuing organisation
-//   year                year earned (string)
-//   url                 public verification page, or null when there isn't one yet
-//   status              "earned" | "in-progress"
-//   statusNote          optional status line shown under the name
-//   previewImage        optional image in /public
-//   previewPlaceholder  text shown in the preview frame when there is no image
-//   includes            optional [{ name, url }]; items with url: null show as plain text
-
 const FCC = "https://www.freecodecamp.org/certification/aelowww10";
 const COURSERA = "https://coursera.org/verify";
 const CREDLY_NETWORK_TECHNICIAN = "https://www.credly.com/badges/cfdcf0b2-7e42-4843-8dd1-40f3a33ce8ef";
@@ -45,7 +30,6 @@ export const certificates = [
     url: CREDLY_NETWORK_TECHNICIAN,
     status: "earned",
     previewImage: "/Certificates/NETWORK%20TECHNICIAN%20CAREER%20PATH.png",
-    // Courses without a badge of their own link to the career path badge.
     includes: [
       { name: "Networking Basics", url: "https://www.credly.com/badges/857fe137-473f-4830-bfd8-513141fa3d76" },
       { name: "Networking Devices and Initial Configuration", url: CREDLY_NETWORK_TECHNICIAN },
@@ -80,7 +64,6 @@ export const certificates = [
       "freeCodeCamp’s new full-stack curriculum. All six required certifications are complete; the certification is awarded after passing the final exam, which opens in late 2026.",
     issuer: "freeCodeCamp",
     year: "2026",
-    // No verification page until the final exam is passed.
     url: null,
     status: "in-progress",
     statusNote: "6 of 6 certifications complete · final exam pending (opens late 2026)",
@@ -106,7 +89,6 @@ export const certificates = [
   }
 ];
 
-// Certificate programs in progress, shown under the earned certificates.
 export const currentlyTaking = [
   { title: "Google IT Support", issuer: "Google · Coursera" },
   { title: "Oracle Cloud Infrastructure Foundations Associate", issuer: "Oracle" }

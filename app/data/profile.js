@@ -1,5 +1,3 @@
-// Personal details, experience, education and links shared across pages. Certificates live in certificates.js.
-
 export const profile = {
   name: "Carl Gemuel Taberna",
   role: "Aspiring Web Developer",
@@ -20,8 +18,6 @@ export const socialLinks = [
   { label: "discord", name: "Discord", href: "https://discord.com/users/938112803829592104" }
 ];
 
-// Newest first. The first entry of each list is marked as current.
-// `icon` is a key in the timeline icon set on the home page.
 export const experience = [
   { year: "Sep 2026", title: "Head Web Developer", org: "Teech", icon: "code", detail: "Built a student–faculty consultation booking app (school project)." },
   { year: "Jun 2026", title: "Network & Broadband Technical Associate", org: "iQor · Bell Canada", icon: "router", detail: "Configured and troubleshot Bell internet connections, home routers and satellite TV service." },
@@ -40,7 +36,6 @@ export const education = [
   { year: "2016", title: "Elementary", org: "Bito-on Elementary School", icon: "school" }
 ];
 
-// Square 720px crops of the Personal Portfolio gallery photos, in the same order. The home page shows the first 6.
 export const galleryPhotos = [
   "/photos/photo-1.webp",
   "/photos/photo-5.webp",

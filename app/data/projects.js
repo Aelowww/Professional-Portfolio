@@ -1,6 +1,3 @@
-// Project + case study content. Screenshots live in /public/projects/<slug>/.
-// Desktop captures are 1440x900, mobile captures are 390x844 at 2x (780x1688).
-
 const desktop = { width: 1440, height: 900 };
 const mobile = { width: 780, height: 1688 };
 
@@ -229,7 +226,6 @@ export const projects = [
     link: "https://konektbarangay.vercel.app/",
     repo: "https://github.com/Aelowww/KonektBarangay",
     prototype: "https://www.figma.com/design/S2vxfCGFT6ACSbCQaG8job/KonektBarangay-Prototype",
-    // Phone frames exported from the Figma file, shown in the case study design section.
     designFrames: [
       { src: "/projects/konektbarangay/design-dashboard.webp", alt: "Figma design: resident dashboard on mobile" },
       { src: "/projects/konektbarangay/design-request-document.webp", alt: "Figma design: request document on mobile" },
@@ -463,7 +459,6 @@ export const projects = [
     link: "https://doogo.vercel.app/",
     repo: "https://github.com/Aelowww/DooGo",
     prototype: "https://www.figma.com/design/WJhNU8WCISEcN8gyjfATeS/DooGo-Prototype",
-    // Phone frames exported from the Figma file, shown in the case study design section.
     designFrames: [
       { src: "/projects/doogo/design-dashboard.webp", alt: "Figma design: dashboard on mobile" },
       { src: "/projects/doogo/design-request-blood.webp", alt: "Figma design: request blood form on mobile" },
@@ -883,5 +878,4 @@ export function isExternalLink(href) {
   return Boolean(href) && /^https?:\/\//.test(href);
 }
 
-// The three projects shown on the home page, in this order. The rest are under "See all".
 export const homeProjects = ["konektbarangay", "awesome-todos", "doogo"].map(getProject);

@@ -57,7 +57,6 @@ function StackRows({ project }) {
   );
 }
 
-// Featured case study: summary, role, features, decisions, design, results, stack, links.
 function FeaturedCaseStudy({ project }) {
   const { featured, caseStudy } = project;
   const features = featured.features.map((title) => caseStudy.features.find((feature) => feature.title === title)).filter(Boolean);
@@ -151,7 +150,6 @@ function FeaturedCaseStudy({ project }) {
   );
 }
 
-// Full case study for projects that aren't featured.
 function ClassicCaseStudy({ project }) {
   const { caseStudy } = project;
   let index = 0;
@@ -297,7 +295,6 @@ export default async function ProjectCaseStudy({ params }) {
             </div>
           </dl>
 
-          {/* Featured case studies list their links in the last section instead. */}
           {project.featured ? null : (
             <>
               <ProjectLinks project={project} />
