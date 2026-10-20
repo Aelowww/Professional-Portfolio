@@ -109,6 +109,109 @@ export const projects = [
     }
   },
   {
+    slug: "progressyx",
+    title: "Progressyx",
+    category: "Learning Progress Tracker",
+    year: "2026",
+    role: "Full-stack Developer",
+    type: "Web app",
+    status: "Ongoing",
+    summary:
+      "A learning tracker for online courses spread across different sites. Paste a course link, add or import its lessons, tick them off as you go, and press Resume to land exactly where you stopped, even mid-video, with streaks and missions to keep you showing up.",
+    highlights: [
+      "Courses from any site in one dashboard, with YouTube playlists imported automatically",
+      "Built-in YouTube player that resumes at the exact second you left off",
+      "Study streaks, daily and weekly missions and 12 milestones"
+    ],
+    link: null,
+    linkNote: "Ongoing project. It runs locally while I finish it, so there's no live site yet.",
+    repo: "https://github.com/Aelowww/Progressyx",
+    techStack: [
+      { name: "Next.js", purpose: "App Router pages, Server Actions and API routes for sessions, link lookups and playback" },
+      { name: "TypeScript", purpose: "Typed data models, progress rules and validation" },
+      { name: "Tailwind CSS", purpose: "Styling, with Radix UI for dialogs, menus and form controls" },
+      { name: "Firebase Auth", purpose: "Email and password sign-in, sign-up and password reset" },
+      { name: "Cloud Firestore", purpose: "Courses, lessons, progress, study sessions and daily activity per user" },
+      { name: "Zod", purpose: "Validates every form and Server Action input" },
+      { name: "YouTube API", purpose: "Embedded player that saves your place, plus playlist and video length imports" },
+      { name: "Vitest", purpose: "Tests for progress, streaks, missions, link detection and the security rules" }
+    ],
+    cover: {
+      desktop: { src: "/projects/progressyx/desktop-home.webp", alt: "Progressyx overview on desktop", ...desktop },
+      mobile: { src: "/projects/progressyx/mobile-home.webp", alt: "Progressyx overview on mobile", ...mobile }
+    },
+    gallery: [
+      { src: "/projects/progressyx/desktop-home.webp", alt: "Overview with study streak, today's missions, this week's missions and courses to resume", caption: "Overview: streak, missions and where you left off", viewport: "desktop", ...desktop },
+      { src: "/projects/progressyx/desktop-courses.webp", alt: "Course grid with source, status, progress and Resume buttons", caption: "Courses from YouTube, web.dev, freeCodeCamp and more in one place", viewport: "desktop", ...desktop },
+      { src: "/projects/progressyx/desktop-course.webp", alt: "Course page with progress, time studied and lesson list", caption: "Course page with progress, study time and lessons", viewport: "desktop", ...desktop },
+      { src: "/projects/progressyx/desktop-lesson.webp", alt: "Lesson player resuming a YouTube video from 25:40", caption: "Built-in player that resumes where you stopped", viewport: "desktop", ...desktop },
+      { src: "/projects/progressyx/desktop-missions.webp", alt: "Missions page with streak, daily and weekly missions and milestones", caption: "Daily and weekly missions plus 12 milestones", viewport: "desktop", ...desktop },
+      { src: "/projects/progressyx/mobile-home.webp", alt: "Overview on mobile", caption: "Overview on a phone", viewport: "mobile", ...mobile },
+      { src: "/projects/progressyx/mobile-courses.webp", alt: "Course list on mobile", caption: "Courses on a phone", viewport: "mobile", ...mobile },
+      { src: "/projects/progressyx/mobile-course.webp", alt: "Course page on mobile", caption: "Course page on a phone", viewport: "mobile", ...mobile },
+      { src: "/projects/progressyx/mobile-lesson.webp", alt: "Lesson player on mobile", caption: "Watching a lesson on a phone", viewport: "mobile", ...mobile },
+      { src: "/projects/progressyx/mobile-missions.webp", alt: "Missions on mobile", caption: "Missions on a phone", viewport: "mobile", ...mobile }
+    ],
+    caseStudy: {
+      overview:
+        "I'm usually taking a few online courses at once, and they all live on different sites: a playlist on YouTube, a course on Cisco Networking Academy, another on freeCodeCamp. Progressyx puts every course in one dashboard. You paste a course link and it reads the title, cover and site name, then you import or add the lessons, tick them off as you go, and press Resume to land on the right lesson, even at the same second of a video. Streaks, daily and weekly missions and milestones keep me coming back every day.",
+      problem:
+        "I kept forgetting which lesson I was on and where I stopped in a video. Each site tracks progress its own way, if at all, so there was no single place to see what I'm learning, how far along I am, or whether I studied today.",
+      goals: [
+        "Keep every course in one place, whichever site it's on",
+        "Never lose my place in a course or a video",
+        "Count only real study time, not just videos left open",
+        "Make showing up every day feel rewarding"
+      ],
+      approach:
+        "I built it on Next.js with TypeScript, using Firebase Authentication and Firestore on the free plan. Every page, Server Action and API route checks the signed-in session on the server, and all data lives under the owner's account, so changing an ID in a URL can't reach anyone else's data. Progress, streak and mission rules live in one module with their own tests. When you paste a course link, the server reads the page's public details, and YouTube links go through the YouTube Data API to import playlist lessons and video lengths.",
+      features: [
+        { title: "Add a course from any site", detail: "Paste a link and Progressyx reads the title, description, cover image and site name the page shares publicly." },
+        { title: "Lesson imports", detail: "YouTube videos and playlists import their lessons, order and lengths. For other sites, paste the syllabus as a plain list to create sections and lessons in seconds." },
+        { title: "Resume", detail: "Picks the lesson you last opened or the next unfinished one, and the built-in YouTube player picks up at the same second." },
+        { title: "Progress you control", detail: "Tick off lessons one at a time or a whole section at once. Watching a video to the end never marks it complete; you decide." },
+        { title: "Streaks and missions", detail: "A study streak with a 7-day strip, daily missions (reach your goal, finish a lesson, show up), weekly missions and 12 milestones to unlock." },
+        { title: "Finish-by dates", detail: "Set a target date and see the days left, with overdue warnings." },
+        { title: "Learning history", detail: "Every study session from the player or logged by hand, grouped by day in your own time zone." },
+        { title: "Course library", detail: "Grid and list views with search, source and status filters, sorting, and archive or reopen for each course." }
+      ],
+      challenges: [
+        {
+          title: "Counting real study time",
+          problem: "Leaving a video open, or editing data from the browser, could inflate study time and streaks.",
+          solution:
+            "Only time actually spent playing in the player, or time you log yourself, counts. The player sends heartbeats and the server caps every update by the real time that has passed. Firestore rules never let the browser write study time or streaks directly."
+        },
+        {
+          title: "Reading course links safely",
+          problem: "Fetching any URL a user pastes from the server could be used to reach private or local network addresses.",
+          solution:
+            "Course links are fetched on the server with checks that block private and local addresses, plus size limits and timeouts. It never signs in to other sites or gets around paywalls."
+        },
+        {
+          title: "Streaks across time zones",
+          problem: "Counting days in the server's time zone would break a streak for someone studying late at night.",
+          solution:
+            "Streaks and missions are counted in each user's own time zone, and a streak only breaks once a whole day passes with nothing studied or finished."
+        }
+      ],
+      outcomes: [
+        "The full flow works end to end: add a course, import or add lessons, study, resume and finish, with streaks and missions updating along the way.",
+        "Layouts that work on phones and computers.",
+        "Tests cover the progress rules, streaks and missions, link detection, validation and the Firestore security rules."
+      ],
+      learnings: [
+        "Small rules like what counts as a study day or 100% shape how fair an app feels",
+        "Server-side fetching of user links needs the same care as any other input",
+        "Building something I use every day is the fastest way to find what's missing"
+      ],
+      nextSteps: [
+        "Deploy it so I can use it from any device",
+        "Track progress on more course sites automatically"
+      ]
+    }
+  },
+  {
     slug: "konektbarangay",
     title: "KonektBarangay",
     category: "E-Services Platform",
